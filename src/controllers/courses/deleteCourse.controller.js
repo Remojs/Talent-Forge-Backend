@@ -1,13 +1,13 @@
 const courseSchema = require('../../db/models/course.model')
 const mongoose = require('mongoose')
 
-const getCoursebyID = async (id) => {
+const deleteCourse = async (id) => {
     try{ 
-        course = courseSchema.findById(id)
+        course = courseSchema.deleteOne({_id: id})
         return course
     } catch (error) {
         console.log(error.message) 
     }
 }
 
-module.exports = getCoursebyID
+module.exports = deleteCourse

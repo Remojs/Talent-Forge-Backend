@@ -19,7 +19,7 @@ const createUser = async (name, dateOfBirth, email, password, country, descripti
         });
 
         user.save()
-
+ 
         return user
     } catch (error) {
         console.log(error.message)
