@@ -37,7 +37,12 @@ const courseSchema =  mongoose.Schema({
         },
         likes:{
             type: Number
-        }
+        },
+        saves:{
+            type: Number
+        },
     }
 },
 {versionKey: false});
+
+module.exports = mongoose.model("Course", courseSchema)
