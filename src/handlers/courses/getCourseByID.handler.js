@@ -1,6 +1,6 @@
-const getCourseDetailController = require("../controllers/getCourseDetail.controller.js")
+const getCourseDetailController = require("../../controllers/courses/getCourseByID.controller.js")
 
-const getCourseDetail = async (req, res) => {
+const getCourseDetailHandler = async (req, res) => {
   let { id } = req.params
 
   try {
@@ -12,4 +12,4 @@ const getCourseDetail = async (req, res) => {
   }
 }
 
-module.exports = getCourseDetail
+module.exports = getCourseDetailHandler

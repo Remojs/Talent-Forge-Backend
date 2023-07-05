@@ -40,5 +40,3 @@ const getCourseDetailController = (id) => {
 };
 
 module.exports = getCourseDetailController;
-
-
