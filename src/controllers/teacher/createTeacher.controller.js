@@ -1,7 +1,7 @@
 const teacherSchema = require('../../db/models/teacher.model')
 const mongoose = require('mongoose')
 
-const createTeacher = async (name, dateOfBirth, email, password, country, description, profileImage) => {
+const createTeacher = async (name, dateOfBirth, email, password, country, description, profileImage, courses) => {
     try {
         const teacher = await teacherSchema({
             name,
@@ -11,6 +11,7 @@ const createTeacher = async (name, dateOfBirth, email, password, country, descri
             country,
             description: description || 'Talent forge teacher',
             profileImage: profileImage || 'null',
+            courses: courses || ['Does not have courses'],
         });
 
         teacher.save()
