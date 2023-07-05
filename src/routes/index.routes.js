@@ -1,6 +1,6 @@
 const { Router } = require("express")
 
-const User = require("./user.routes") 
+const User = require("./user.routes")
 const Courses = require("./courses.routes")
 const Teacher = require('./teacher.routes')
 //const CartHandler = require('../handlers/cart.handler') 
