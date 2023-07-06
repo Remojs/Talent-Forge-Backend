@@ -1,7 +1,7 @@
 const courseSchema = require('../../db/models/course.model')
 const mongoose = require('mongoose')
 
-const createCourse = async (title, cathegory, theme, link, teacher, description, interactions) => {
+const createCourse = async (title, cathegory, theme, link, teacher, description, interactions, image) => {
     try {
         const course = await courseSchema({
             title,
@@ -9,6 +9,7 @@ const createCourse = async (title, cathegory, theme, link, teacher, description,
             theme,
             link,
             teacher,
+            image, 
             description: description || 'Course',
             interactions: interactions || {
                 comments:['0 comments'],

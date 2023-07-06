@@ -31,6 +31,11 @@ const courseSchema =  mongoose.Schema({
         required: false 
     },
 
+    image:{
+        type: String,
+        required: true
+    },
+
     interactions:{
         comments:{
             type: Object
