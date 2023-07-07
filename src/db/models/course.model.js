@@ -12,7 +12,7 @@ const courseSchema =  mongoose.Schema({
     },
 
     theme:{
-        type: String,
+        type: Array,
         required: true
     },
 
@@ -33,6 +33,21 @@ const courseSchema =  mongoose.Schema({
 
     image:{
         type: String,
+        required: true
+    },
+
+    duration:{
+        type: String,
+        required: true
+    },
+
+    prize:{
+        type: Number,
+        required: true
+    },
+
+    rating:{
+        type: Number,
         required: true
     },
 
