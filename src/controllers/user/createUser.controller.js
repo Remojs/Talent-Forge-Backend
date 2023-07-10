@@ -1,20 +1,23 @@
 const userSchema = require('../../db/models/user.model')
 const mongoose = require('mongoose')
 
-const createUser = async (name, dateOfBirth, email, password, country, description, profileImage, interactions) => {
+const createUser = async (fullName, username, dateOfBirth, email, password, country, description, profileImage, interactions, accountType) => {
     try {
         const user = await userSchema({
-            name,
+            fullName, 
+            username,
             email,
             password,
             dateOfBirth,
             country,
+            accountType: accountType || 'user',
             description: description || 'Talent forge user',
             profileImage: profileImage || 'null',
             interactions: interactions || {
-                friends:['dont have friends...'],
-                savedCourses:['dont have courses...'],
-                posts:['dont have posts...']
+                friends:[],
+                savedCourses:[],
+                puchasedCourses:[],
+                posts:[]
             }
         });
 

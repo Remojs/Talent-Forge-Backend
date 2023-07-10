@@ -1,14 +1,20 @@
 const mongoose = require("mongoose")
 
 const userSchema =  mongoose.Schema({
-    name:{
+    fullName:{
+        type: String,
+        required: true
+    },
+    
+    username:{
         type: String,
         required: true
     },
 
     email:{
         type: String,
-        required: true
+        required: true,
+        unique: true,
     },
 
     dateOfBirth:{
@@ -36,11 +42,19 @@ const userSchema =  mongoose.Schema({
         required: false 
     },
 
+    accountType:{
+        type: String,
+        required: true
+    },
+
     interactions:{
         friends:{
             type: Array
         },
         savedCourses:{
+            type: Array
+        },
+        purchasedCourses:{
             type: Array
         },
         posts:{
