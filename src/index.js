@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 9000
 
 //MIDDLEWARES
 app.use(cors({
-    origin: "http://localhost:3000/",
+    origin: "http://localhost:3000",
     credentials: true,
     methods: "GET, POST, OPTIONS, PUT, DELETE",
     allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept"
