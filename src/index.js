@@ -8,10 +8,10 @@ const PORT = process.env.PORT || 9000
 
 //MIDDLEWARES
 app.use(cors({
-  origin: "http://localhost:3000",
-  credentials: true,
-  methods: "GET, POST, OPTIONS, PUT, DELETE",
-  allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept"
+    origin: "http://localhost:3000/",
+    credentials: true,
+    methods: "GET, POST, OPTIONS, PUT, DELETE",
+    allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept"
 }));
 app.use(express.json())
 app.use(morgan("dev"))
