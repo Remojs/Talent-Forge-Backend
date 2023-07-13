@@ -48,6 +48,11 @@ const userSchema =  mongoose.Schema({
         required: true
     },
 
+    registerWith:{
+        type: String,
+        required: true
+    },
+
     interactions:{
         friends:{
             type: Array
