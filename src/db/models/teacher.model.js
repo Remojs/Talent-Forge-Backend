@@ -35,9 +35,14 @@ const teacherSchema =  mongoose.Schema({
         type: String,
         required: false 
     },
+
     courses:{
         type:Array,
         required: false
+    }, 
+
+    disabled:{
+        type: Boolean
     }
 },
 {versionKey: false});

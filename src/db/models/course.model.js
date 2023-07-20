@@ -46,9 +46,8 @@ const courseSchema =  mongoose.Schema({
         required: true
     },
 
-    rating:{
-        type: Number,
-        required: true
+    disabled:{
+        type: Boolean
     },
 
     interactions:{
@@ -61,6 +60,9 @@ const courseSchema =  mongoose.Schema({
         saves:{
             type: Number
         },
+        ratings:{
+            type: Array
+        }
     }
 },
 {versionKey: false});
