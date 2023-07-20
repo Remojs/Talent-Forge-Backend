@@ -43,6 +43,10 @@ const userSchema =  mongoose.Schema({
         required: false 
     },
 
+    disabled:{
+        type: Boolean
+    },
+
     accountType:{
         type: String,
         required: true
@@ -51,10 +55,6 @@ const userSchema =  mongoose.Schema({
     registerWith:{
         type: String,
         required: true
-    },
-
-    disabled:{
-        type: Boolean
     },
 
     interactions:{
