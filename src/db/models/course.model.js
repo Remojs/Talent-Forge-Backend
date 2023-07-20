@@ -51,9 +51,6 @@ const courseSchema =  mongoose.Schema({
     },
 
     interactions:{
-        comments:{
-            type: Object
-        },
         likes:{
             type: Number
         },
@@ -61,7 +58,7 @@ const courseSchema =  mongoose.Schema({
             type: Number
         },
         ratings:{
-            type: Array
+            type: Object
         }
     }
 },
