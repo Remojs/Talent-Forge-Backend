@@ -53,6 +53,10 @@ const userSchema =  mongoose.Schema({
         required: true
     },
 
+    disabled:{
+        type: Boolean
+    },
+
     interactions:{
         friends:{
             type: Array

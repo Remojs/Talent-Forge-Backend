@@ -4,8 +4,8 @@ const mongoose = require('mongoose')
 const editUsersHandler = async(req, res) => {
     try {
         const { id } = req.params;
-        const {fullName, username, dateOfBirth, email, password, country, description, profileImage, accountType, registerWith} = req.body
-        const userUpdated = await editUsers(id, fullName, username, dateOfBirth, email, password, country, description, profileImage, accountType, registerWith)
+        const {fullName, username, dateOfBirth, email, password, country, description, profileImage, accountType, registerWith, disabled} = req.body
+        const userUpdated = await editUsers(id, fullName, username, dateOfBirth, email, password, country, description, profileImage, accountType, registerWith, disabled)
         res.status(200).json(userUpdated)
     } catch (error) {
         res.status(500).send({error: error.message})
