@@ -1,7 +1,7 @@
 const userSchema = require('../../db/models/user.model')
 const mongoose = require('mongoose')
 
-const createUser = async (fullName, username, dateOfBirth, email, password, country, description, profileImage, interactions, accountType, registerWith) => {
+const createUser = async (fullName, username, dateOfBirth, email, password, country, description, profileImage, interactions, accountType, registerWith, disabled) => {
     try {
         const user = await userSchema({
             fullName, 
@@ -10,6 +10,7 @@ const createUser = async (fullName, username, dateOfBirth, email, password, coun
             password,
             dateOfBirth,
             country,
+            disabled: false,
             accountType: accountType || 'user',
             description: description || 'Talent forge user',
             profileImage: profileImage || 'null',
