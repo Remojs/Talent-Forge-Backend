@@ -44,7 +44,9 @@ const userSchema =  mongoose.Schema({
     },
 
     disabled:{
-        type: Boolean
+        type: Boolean,
+        updatable: true,
+        required: true
     },
 
     accountType:{
