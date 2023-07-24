@@ -33,6 +33,11 @@ const userSchema =  mongoose.Schema({
         required: true
     },
 
+    status: {
+        type: String,
+        required: true
+    },
+
     description:{
         type: String,
         required: false 
@@ -41,12 +46,6 @@ const userSchema =  mongoose.Schema({
     profileImage:{
         type: String,
         required: false 
-    },
-
-    disabled:{
-        type: Boolean,
-        updatable: true,
-        required: true
     },
 
     accountType:{
