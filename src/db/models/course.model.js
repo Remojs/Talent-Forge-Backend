@@ -92,7 +92,8 @@ const courseSchema =  mongoose.Schema({
     },
 
     disabled:{
-        type: Boolean
+        type: Boolean,
+        default: false
     },
 
     comments: {
