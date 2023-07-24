@@ -13,6 +13,7 @@ const createCourse = async (title, cathegory, theme, link, teacher, description,
             duration, 
             rating, 
             prize,
+            disable: false,
             description: description || 'Course',
             interactions: interactions || {
                 comments:['0 comments'],

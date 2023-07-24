@@ -18,7 +18,8 @@
     "jsonwebtoken": "^9.0.1",
     "mercadopago": "^1.5.16",
     "mongoose": "^7.3.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
