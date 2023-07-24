@@ -1,4 +1,49 @@
 const mongoose = require("mongoose")
+const { v4: uuidv4 } = require("uuid");
+
+const responseSchema = mongoose.Schema({
+    id: {
+        type: String,
+        default: uuidv4,
+        required: true,
+    },
+    response: {
+        type: String,
+        required: true,
+    },
+    image: {
+        type: String,
+        required: true,
+    },
+    name: {
+        type: String,
+        required: true,
+    },
+  });
+
+const commentSchema = mongoose.Schema({
+    id: {
+        type: String,
+        default: uuidv4,
+        required: true,
+    },
+    comment: {
+        type: String,
+        required: true,
+    },
+    image: {
+        type: String,
+        required: true,
+    },
+    name: {
+        type: String,
+        required: true,
+    },
+    responses: {
+        type: [responseSchema],
+        default: [],
+    },
+  });
 
 const courseSchema =  mongoose.Schema({
     title:{
@@ -48,6 +93,10 @@ const courseSchema =  mongoose.Schema({
 
     disabled:{
         type: Boolean
+    },
+
+    comments: {
+        type: [commentSchema]
     },
 
     interactions:{
