@@ -22,7 +22,7 @@ const createPreferencePost = (req, res) => {
     auto_return: "approved",
   };
 
-  mercadopago.preferences
+ const result = mercadopago.preferences
     .create(preference)
     .then(function (response) {
       res.json({
@@ -32,6 +32,8 @@ const createPreferencePost = (req, res) => {
     .catch(function (error) {
       console.log(error);
     });
+
+    console.log(result);
 };
 
 const Payment = (req, res) => {

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose")
+const { v4: uuidv4 } = require("uuid");
 
 const courseSchema =  mongoose.Schema({
     title:{
@@ -59,6 +60,20 @@ const courseSchema =  mongoose.Schema({
         },
         ratings:{
             type: Object
+        },
+        comments: {
+            _id: {
+                type: String,
+                default: () => uuidv4
+            },
+            content: {
+                type: String,
+                required: true
+            },
+            replies: {
+                type: Object,
+                default: () => uuidv4
+            }
         }
     }
 },
