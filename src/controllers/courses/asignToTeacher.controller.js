@@ -12,7 +12,7 @@ const assignToTeacher = (inputData, teacherId) => {
           );
           return assignedCourses;
 	} catch (error) {
-		console.log('ay cabron' + error.message);
+		console.log(error.message);
 	}
 };
 
