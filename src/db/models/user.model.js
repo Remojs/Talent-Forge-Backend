@@ -58,14 +58,15 @@ const userSchema =  mongoose.Schema({
         required: true
     },
 
+    purchasedCourses:{
+        type: Object
+    },
+
     interactions:{
         friends:{
             type: Array
         },
         savedCourses:{
-            type: Array
-        },
-        purchasedCourses:{
             type: Array
         },
         posts:{
