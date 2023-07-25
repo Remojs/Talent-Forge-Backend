@@ -15,7 +15,8 @@ const loginController = async (username, password) => {
                 password: user.password,
                 description: user.description,
                 profileImage: user.profileImage,
-                accountType: user.accountType 
+                accountType: user.accountType,
+                purchasedCourses: user.purchasedCourses
             },'secretKey');
             
             return  token;
