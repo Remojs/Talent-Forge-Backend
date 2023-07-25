@@ -5,6 +5,7 @@ const addPurchasedCoursesHandler = async(req, res) => {
     try {
         const { id } = req.params;
         const course = {
+            image: req.body.image,
             title: req.body.title,
             id: req.body.id,
             teacher: req.body.teacher
