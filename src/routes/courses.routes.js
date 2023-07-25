@@ -8,13 +8,17 @@ const getCourseByNameHandler = require('../handlers/courses/getCourseByName.hand
 const editCourseHandler = require('../handlers/courses/editCourse.handler')
 const deleteCourseHandler = require('../handlers/courses/deleteCourse.handler')
 const addRatingHandler = require('../handlers/courses/addRating.handler')
+const commentCourseHandler = require('../handlers/courses/commentCourse.handler');
+const assignToTeacherHandler = require("../handlers/courses/asignToTeacher.handler");
 
 router.post('/', createCourseHandler)
 router.get('/', getAllCoursesHandler)
 router.get('/:id', getCourseByIdHandler)
 router.get('/name/:title', getCourseByNameHandler)
+router.put('/comment/:id', commentCourseHandler)
 router.put('/edit/:id', editCourseHandler)
 router.put('/rating/:id', addRatingHandler)
+router.put('/assign/', assignToTeacherHandler)
 router.delete('/delete/:id', deleteCourseHandler)
 
 

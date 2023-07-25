@@ -33,6 +33,11 @@ const userSchema =  mongoose.Schema({
         required: true
     },
 
+    status: {
+        type: String,
+        required: true
+    },
+
     description:{
         type: String,
         required: false 
@@ -43,15 +48,9 @@ const userSchema =  mongoose.Schema({
         required: false 
     },
 
-    disabled:{
-        type: Boolean,
-        updatable: true,
-        required: true
-    },
-
     accountType:{
         type: String,
-        required: true
+        default: 'user',
     },
 
     registerWith:{
@@ -59,14 +58,15 @@ const userSchema =  mongoose.Schema({
         required: true
     },
 
+    purchasedCourses:{
+        type: Object
+    },
+
     interactions:{
         friends:{
             type: Array
         },
         savedCourses:{
-            type: Array
-        },
-        purchasedCourses:{
             type: Array
         },
         posts:{

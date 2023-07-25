@@ -1,6 +1,50 @@
 const mongoose = require("mongoose")
 const { v4: uuidv4 } = require("uuid");
 
+const responseSchema = mongoose.Schema({
+    id: {
+        type: String,
+        default: uuidv4,
+        required: true,
+    },
+    response: {
+        type: String,
+        required: true,
+    },
+    image: {
+        type: String,
+        required: true,
+    },
+    name: {
+        type: String,
+        required: true,
+    },
+  });
+
+const commentSchema = mongoose.Schema({
+    id: {
+        type: String,
+        default: uuidv4,
+        required: true,
+    },
+    comment: {
+        type: String,
+        required: true,
+    },
+    image: {
+        type: String,
+        required: true,
+    },
+    name: {
+        type: String,
+        required: true,
+    },
+    responses: {
+        type: [responseSchema],
+        default: [],
+    },
+  });
+
 const courseSchema =  mongoose.Schema({
     title:{
         type: String,
@@ -48,7 +92,12 @@ const courseSchema =  mongoose.Schema({
     },
 
     disabled:{
-        type: Boolean
+        type: Boolean,
+        default: false
+    },
+
+    comments: {
+        type: [commentSchema]
     },
 
     interactions:{
@@ -60,20 +109,6 @@ const courseSchema =  mongoose.Schema({
         },
         ratings:{
             type: Object
-        },
-        comments: {
-            _id: {
-                type: String,
-                default: () => uuidv4
-            },
-            content: {
-                type: String,
-                required: true
-            },
-            replies: {
-                type: Object,
-                default: () => uuidv4
-            }
         }
     }
 },
