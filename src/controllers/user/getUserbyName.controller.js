@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 
 const getUserbyName = async (name) => {
     try{ 
-        users = await userSchema.find({name: name}).exec()
+        users = await userSchema.find({fullName: name}).exec()
         return users
     } catch (error) {
         console.log(error.message) 
