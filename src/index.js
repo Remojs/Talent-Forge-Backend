@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 9000;
 //MIDDLEWARES
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://deploy-front-end-theta.vercel.app"],
+    origin: ["http://localhost:3000", "https://deploy-front-end-git-main-shakkus.vercel.app"],
     credentials: true,
     methods: "GET, POST, OPTIONS, PUT, DELETE",
     allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept",
