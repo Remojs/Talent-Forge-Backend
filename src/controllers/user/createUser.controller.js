@@ -13,7 +13,7 @@ const createUser = async (fullName, username, dateOfBirth, email, password, coun
             status: status || "active",
             accountType: accountType || 'user',
             description: description || 'Talent forge user',
-            profileImage: profileImage || 'null',
+            profileImage: profileImage || 'https://cdn-icons-png.flaticon.com/512/235/235359.png',
             registerWith: registerWith || 'local',
             interactions: interactions || {
                 friends:[],
