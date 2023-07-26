@@ -15,8 +15,8 @@ const createPreferencePost = (req, res) => {
       },
     ],
     back_urls: {
-      success: "http://localhost:3000/cart/success",
-      failure: "http://localhost:3000/cart",
+      success: "https://deploy-front-end-git-main-shakkus.vercel.app/cart/success",
+      failure: "https://deploy-front-end-git-main-shakkus.vercel.app/cart",
       pending: "",
     },
     auto_return: "approved",
